@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FontMetrics.js</title>
+    <style>
+      html, body {
+        font-family: 'Roboto Mono';
+        background: #03a9f4;
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+        color: #242627;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      button, select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        vertical-align: middle;
+        font-family: 'Roboto Mono';
+        white-space: nowrap;
+        line-height: 40px;
+        background: transparent;
+        text-align: center;
+        font-size: 16px;
+        display: inline-block;
+        padding: 0 24px;
+        outline: none;
+        height: 40px;
+        border: none;
+        color: #242627;
+      }
+      button:disabled, select:disabled {
+        color: #0288d1;
+      }
+      #container {
+        height: 100%;
+        width: 100%;
+      }
+      #header {
+        text-align: center;
+        position: absolute;
+        padding: 24px;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+      #header h1 {
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0 0 4px 0;
+      }
+      #header a {
+        transition: opacity 0.3s ease;
+        text-decoration: none;
+        font-size: 12px;
+        opacity: 0.6;
+        cursor: pointer;
+        color: #242627;
+      }
+      #header a:hover {
+        opacity: 1.0;
+      }
+      #canvas {
+        height: 100%;
+        width: 100%; 
+      }
+      #gui {
+        text-align: center;
+        position: absolute;
+        padding: 24px;
+        bottom: 0;
+        width: 100%;
+      }
+      #select {
+        text-align-last: center;
+        max-width: 250px;
+      }
+      #shuffle {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <canvas id="canvas"></canvas>
+      <header id="header">
+        <h1>FontMetrics.js</h1>
+        <a title="FontMetrics.js on GitHub" href="https://github.com/soulwire/FontMetrics">View on GitHub</a>
+      </header>
+      <div id="gui">
+        <select disabled name="font" id="select"></select>
+        <button disabled id="shuffle">Random Font</button>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script src="output/FontMetrics.js"></script>
+    <script src="output/demo.js"></script>
+  </body>
+</html>

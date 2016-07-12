@@ -1,0 +1,41 @@
+{
+  "name": "fontmetrics",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript utility for computing accurate font metrics, such as x-height, cap-height, ascent and descent.",
+  "main": "output/FontMetrics.js",
+  "scripts": {
+    "deploy": "npm run build && git branch gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
+    "minify": "uglifyjs -cmo ./output/FontMetrics.min.js ./output/FontMetrics.js",
+    "clean": "rm -rf ./output",
+    "build": "npm run clean && webpack --progress --colors && npm run minify",
+    "start": "webpack-dev-server --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "font",
+    "metrics"
+  ],
+  "author": "Justin Windle <justin@soulwire.co.uk>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soulwire/FontMetrics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soulwire/FontMetrics/issues"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "es6-promise": "^3.2.1",
+    "uglify-js": "^2.6.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
